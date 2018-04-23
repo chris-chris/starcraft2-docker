@@ -6,8 +6,9 @@ USER root
 WORKDIR /root
 
 # Change default python 2.7 => 3
-RUN sudo rm /usr/bin/python
-RUN sudo ln -s /usr/bin/python3 /usr/bin/python
+# RUN sudo rm /usr/bin/python
+RUN ln -sfn /usr/bin/python3 /usr/bin/python
+# RUN ln -s /usr/bin/python3 /usr/bin/python
 #RUN sudo rm /usr/bin/pip
 #RUN sudo ln -s /usr/bin/pip3 /usr/bin/pip
 
