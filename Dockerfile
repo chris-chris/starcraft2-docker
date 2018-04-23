@@ -6,10 +6,10 @@ USER root
 WORKDIR /root
 
 # Change default python 2.7 => 3
-RUN rm /usr/bin/python
-RUN ln -s /usr/bin/python3 /usr/bin/python
-RUN rm /usr/bin/pip
-RUN ln -s /usr/bin/pip3 /usr/bin/pip
+RUN sudo rm /usr/bin/python
+RUN sudo ln -s /usr/bin/python3 /usr/bin/python
+#RUN sudo rm /usr/bin/pip
+#RUN sudo ln -s /usr/bin/pip3 /usr/bin/pip
 
 # Install wget
 RUN apt-get update
