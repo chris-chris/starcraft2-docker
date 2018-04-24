@@ -5,9 +5,6 @@ USER root
 
 WORKDIR /root
 
-# Change default python 2.7 => 3
-RUN /bin/bash -c "ln -sfn /usr/bin/python3 /usr/bin/python"
-
 # Install wget
 RUN apt-get update
 RUN apt-get install wget unzip git python-mpi4py cmake libopenmpi-dev -y
@@ -50,3 +47,5 @@ RUN chmod -R 777 /home/nsml
 # Move StarCraftII to /home/nsml
 RUN mv ~/StarCraftII /home/nsml/
 
+# Change default python 2.7 => 3
+RUN /bin/bash -c "ln -sfn /usr/bin/python3 /usr/bin/python"
